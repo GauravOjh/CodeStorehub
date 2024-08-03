@@ -73,3 +73,12 @@
     background-color: #cccccc;
     cursor: not-allowed;
   }
+
+  .gotosignup{
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .container .gotosignup:hover {
+    color: #c82333;
+  }

@@ -6,4 +6,6 @@
     <h5 class="red-text" [hidden]="password.untouched ||  password.valid">Enter Valid Password</h5>
     <button [disabled]="loginform.invalid" (click)="loginForm()">Login</button>
     <button (click)="resetForm()">Reset</button>
+    <a class="gotosignup" (click)="goToSignup()" >Register Account</a>
 </form>
+

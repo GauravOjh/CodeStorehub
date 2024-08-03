@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,6 +10,8 @@ import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angula
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+
+constructor(private router:Router){}  
 
 email = new FormControl("",[Validators.required,Validators.email]);
 password = new FormControl("",[Validators.required,Validators.minLength(6)]);
@@ -24,7 +27,10 @@ loginForm(){
 
 resetForm(){
   this.loginform.reset();
-  console.log(this.loginform);
+}
+
+goToSignup(){
+ this.router.navigate(['/signup']);
 }
 
 }
